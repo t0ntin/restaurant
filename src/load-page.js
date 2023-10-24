@@ -1,6 +1,6 @@
+import './style.css';
+import plateImage from './plate.png';
 
-
-import { renderHome } from "./home";
 
 function createHeader() {
   const header = document.createElement('header');
@@ -39,42 +39,22 @@ function createNavLi() {
   return [navHomeLi, navMenuLi, navContactLi];
 }
 
+function renderHome(main) {
+  const plate = new Image();
+  plate.src = plateImage;
+  main.append(plate);
+  const description = document.createElement('p');
+  main.append(description);
+  description.innerText = `Welcome to The Punderful Plate. Our quirky and cozy eatery is a delightful haven for food enthusiasts and pun aficionados alike. From our delectable "Punderful Pasta" to our "Hilarious Hamburgers," you will savor the flavor of pun-omenal cuisine. Come for the food, stay for the puns!`
+}
+
 function loadPage() {
   const main = document.querySelector('#content');
   
   main.append(createHeader());
-  renderHome();
+  renderHome(main);
 }
-// TRYING TO CREATE LIS INSIDE UL. *****
+
 
 export default loadPage;
 
-
-// function loadPage() {
-//   const main = document.querySelector('#content')
-
-//   const nav = document.createElement('nav');
-//   main.append(nav);
-  
-//   const navUl = document.createElement('ul');
-//   nav.append(navUl);
-
-//   const navHomeLi = document.createElement('li');
-//   navUl.append(navHomeLi);
-//   navHomeLi.textContent = 'Home';
-
-//   const navMenuLi = document.createElement('li');
-//   navUl.append(navMenuLi);
-//   navMenuLi.textContent = 'Menu';
-
-//   const navContactLi = document.createElement('li');
-//   navUl.append(navContactLi);
-//   navContactLi.textContent = 'Contact';
-
-//   const title = document.createElement('h1')
-//   nav.append(title);
-//   title.innerText = "The Punderful Plate";
-  
-  
-  
-// }
