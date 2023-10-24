@@ -1,4 +1,9 @@
-import { renderHome } from "./home";
+// import { renderHome } from "./home";
+import  loadPage  from "./load-page";
 
-renderHome();
+// const main = document.querySelector('#content')
+
+loadPage();
+// renderHome(main);
+
 console.log("Testing");
