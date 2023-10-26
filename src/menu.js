@@ -11,7 +11,6 @@ export function renderMenu (bodyEl) {
   const menuItemEl = document.createElement('p');
   menuItemEl.textContent = "This is the first item";
   bodyEl.append(menuItemEl);
-        console.log("body element:", bodyEl); 
 
 }
 

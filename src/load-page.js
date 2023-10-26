@@ -40,7 +40,7 @@ function createNavLi() {
 }
 
 function renderHome(main) {
-  let homeInfo = {isHomeLoaded : true};
+  let activePage = {homeIsActive : true};
   const bodyEl = document.createElement('div');
   main.append(bodyEl);
   const plate = new Image();
@@ -58,13 +58,25 @@ function createFooter(main) {
   footer.textContent = "test";
 }
 
+
+function handleClick() {
+  const navUl = document.querySelector('ul');
+  navUl.addEventListener('click', function (event) {
+    if (event.target.tagName === 'LI') {
+      console.log('Clicked element:', event.target.innerText);
+    }
+  });
+    
+  }
+
+
 function loadPage() {
   const main = document.querySelector('#content');
-        console.log("main element:", main);
   main.append(createHeader());
   renderHome(main);
   createFooter(main);
   renderMenu(main);
+  handleClick();
 }
 
 export default loadPage;

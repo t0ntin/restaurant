@@ -5,5 +5,3 @@ import  loadPage  from "./load-page";
 
 loadPage();
 // renderHome(main);
-
-console.log("Testing");
