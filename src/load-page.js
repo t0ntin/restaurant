@@ -30,7 +30,7 @@ function createFooter(main) {
   main.append(footer);
 }
 
-function renderSection(section) {
+function renderHome(section) {
   const plate = new Image();
   plate.src = plateImage;
   section.append(plate);
@@ -40,13 +40,15 @@ function renderSection(section) {
 }
 
 function handleClick() {
-  // let activePage = {homeIsActive : true};
+  const section = document.querySelector('section');
+
+  let activePage = {homeIsActive : true};
   const nav = document.querySelector('nav');
   nav.addEventListener('click', function (event) {
-    if (event.target.tagName === 'BUTTON') {
-      console.log("test");
-      
-    }
+    if (event.innerText === 'Home' && activePage.homeIsActive === true) {
+      return;
+    } else section.innerHTML = '';
+        renderMenu();
   });
 }
 
@@ -55,7 +57,7 @@ function loadPage() {
   
   createHeader(main);
   const section = createSection(main);
-  renderSection(section);
+  renderHome(section);
   createFooter(main);
   handleClick();
 }
