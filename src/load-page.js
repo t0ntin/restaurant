@@ -42,13 +42,19 @@ function renderHome(section) {
 function handleClick() {
   const section = document.querySelector('section');
 
-  let activePage = {homeIsActive : true};
+  let activePage = {homeIsActive : true, menuIsActive : false};
   const nav = document.querySelector('nav');
   nav.addEventListener('click', function (event) {
-    if (event.innerText === 'Home' && activePage.homeIsActive === true) {
+    if (activePage.homeIsActive === true && event.target.innerText === 'Home') {
       return;
-    } else section.innerHTML = '';
-        renderMenu();
+    } else 
+      activePage.homeIsActive = true;
+      renderHome(section);
+    if (event.target.innerText === 'Menu'){
+      section.innerHTML = '';
+      renderMenu(section);
+      activePage.homeIsActive = false;
+    }
   });
 }
 

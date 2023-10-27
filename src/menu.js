@@ -13,6 +13,6 @@ export function renderMenu () {
   const menuItemEl = document.createElement('p');
   menuItemEl.textContent = "This is the first item";
   section.append(menuItemEl);
-
+  
 }
 
