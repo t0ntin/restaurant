@@ -16,6 +16,7 @@ function createHeader(main) {
   for (let i = 0; i < 3; i++) {
     const button = document.createElement('button');
     button.innerText = sectionNames[i];
+    button.setAttribute('id',sectionNames[i]);
     nav.append(button);
   }
 }
@@ -45,7 +46,9 @@ function renderHome(section) {
 
 function handleClick() {
   const section = document.querySelector('section');
-
+  const homeButton = document.querySelector('#Home');
+  // const menuButton = document.querySelector('#2');
+  // const contactButton = document.querySelector('#3');
   let activePage = {homeIsActive : true, menuIsActive : false};
   const nav = document.querySelector('nav');
   nav.addEventListener('click', function (event) {

@@ -56,15 +56,50 @@ h1 {
 nav {
   display: flex;
   gap: 1rem;
+  margin-bottom: .5rem;
 }
 
 button {
+  /* border-left: 1px solid #EFE1D1;
+  border-top: none;
+  border-bottom: none;
+  border-right: none; */
   border: none;
-  padding: .5rem;
-  border-radius: 2px;
-  background-color: rgb(190, 33, 127);;
+  padding: .5rem 1rem .5rem 1rem;
+  /* border-radius: 2px; */
+  background-color: rgb(89, 9, 9);
+  color: var(--TEXT-COLOR);
+  font-family: monospace;
+  font-size: 1.2rem;
+  /* font-weight: bold; */
+  cursor: pointer;
+  position: relative;
+  letter-spacing: 2px;
+
 }
 
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -3px;
+  height: 0%;
+  width: 2px;
+  background-color: var(--TEXT-COLOR);
+  transition: height 0.2s;
+}
+
+button:hover::before {
+  height: 100%;
+
+}
+
+nav button:first-child {
+  /* Your styles for the first button here */
+  /* text-shadow: 1px 1px 2px rgb(207, 29, 171); */
+  font-weight: bold;
+  /* Add other styles as needed */
+}
 
 section {
   display: flex;
