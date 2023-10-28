@@ -32,9 +32,12 @@ function createFooter(main) {
 }
 
 function renderHome(section) {
+  // const container = document.createElement('div');
+  // section.append(container);
   const plate = new Image();
   plate.src = plateImage;
   section.append(plate);
+  plate.classList.add('plate');
   const description = document.createElement('p');
   section.append(description);
     description.innerText = `Welcome to The Punderful Plate. Our quirky and cozy eatery is a delightful haven for food enthusiasts and pun aficionados alike. From our delectable "Punderful Pasta" to our "Hilarious Hamburgers," you will savor the flavor of pun-omenal cuisine. Come for the food, stay for the puns!`
@@ -76,4 +79,3 @@ function loadPage() {
 }
 
 export default loadPage;
-

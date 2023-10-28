@@ -5,13 +5,31 @@
   list-style: none;
 }
 
+@font-face {
+  font-family: 'KaushanScript', cursive;
+  src: url('/src/KaushanScript-Regular.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Macondo', cursive;
+  src: url('/src/Macondo-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
 main {
-  background: rgb(63,94,251);
-  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(31,7,12,1) 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
+background-color: rgba(0, 0, 0, 0.869);
+background-image: url(/src/burger.jpg);
+background-repeat: no-repeat;
+background-position: center;
+
+
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 100vh;
 }
 
 header {
@@ -23,7 +41,8 @@ header {
 header p {
   color: white;
   font-size: 3rem;
-
+  /* font-family: 'Kaushan Script', cursive; */
+  font-family: 'Macondo', cursive;
 }
 
 nav {
@@ -61,12 +80,23 @@ section {
   flex-direction: column;
   align-items: center;
   height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.749);
+  width: 40%;
+  max-width: 800px;
+  padding: 2rem;
 }
 
 p {
-  color: rgb(255, 255, 255);
+  color: #ED2B2A;
   font-size: 1.5rem;
   margin: 1rem;
+}
+
+.plate {
+  width: 300px;
+  border-radius: 50%;
+  filter: invert(47%) sepia(79%) saturate(6541%) hue-rotate(345deg) brightness(94%) contrast(98%);
+  
 }
 
 footer {
