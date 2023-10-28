@@ -19,7 +19,7 @@ function createHeader(main) {
     button.setAttribute('id',sectionNames[i]);
     nav.append(button);
   }
-  
+
 }
 
 function createSection(main) {
@@ -30,12 +30,13 @@ function createSection(main) {
 
 function createFooter(main) {
   const footer = document.createElement('footer');
+  const footerP =document.createElement('p');
   main.append(footer);
+  footer.append(footerP);
+  footerP.textContent = "Site created by t0ntin."
 }
 
 function renderHome(section) {
-  // const container = document.createElement('div');
-  // section.append(container);
   const plate = new Image();
   plate.src = plateImage;
   section.append(plate);
@@ -60,6 +61,9 @@ function handleClick() {
       activePage.homeIsActive = true;
       renderHome(section);
       homeButton.style.fontWeight = 'bold';
+      menuButton.style.fontWeight = '';
+      contactButton.style.fontWeight = '';
+
     if (event.target.innerText === 'Menu'){
       section.innerHTML = '';
       homeButton.style.fontWeight = '';

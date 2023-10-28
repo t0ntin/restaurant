@@ -57,7 +57,26 @@ nav {
   display: flex;
   gap: 1rem;
   margin-bottom: .5rem;
+
+  /* transition: all 0.3s ease; */
+  transform: translateX(-7px);
+
+  animation: slideInNav 1s forwards;
 }
+
+nav:hover {
+  transform: translateX(0);
+}
+
+@keyframes slideInNav {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
 
 button {
   border: none;
@@ -93,6 +112,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   margin-top: 4rem;
   height: 60%;
   background-color: var(--SECTION-BG-COLOR);
@@ -102,7 +122,36 @@ section {
   padding: 2rem;
   border: 1px solid;
   border-color: var(--TEXT-COLOR);
+  /* animation: slideInSection 1s forwards; */
+  transition: transform 0.5s;
+}
 
+section:hover {
+  transform: scale3d(1.2, 1.2, 1.2); 
+}
+
+@keyframes slideInSection {
+  from {
+    /* transform: translateX(100%);
+    transform:translateY(50%); */
+    transform: scale3d(sx, sy, sz);
+
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+section div {
+  display: flex;
+  gap: .5rem;
+  
+}
+
+section div img {
+
+  width: 150px;
+  height: 150px;
 }
 
 p {
@@ -124,9 +173,17 @@ footer {
   width: 100%;
   /* max-width: 1000px; */
   height: 100%;
-  max-height: 10%;
-  min-height: 10%;
+  max-height: 5%;
+  min-height: 5%;
   position: fixed;
   bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 
+}
+
+footer p {
+  font-size: .8rem;
 }
