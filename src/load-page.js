@@ -19,6 +19,7 @@ function createHeader(main) {
     button.setAttribute('id',sectionNames[i]);
     nav.append(button);
   }
+  
 }
 
 function createSection(main) {
@@ -47,8 +48,8 @@ function renderHome(section) {
 function handleClick() {
   const section = document.querySelector('section');
   const homeButton = document.querySelector('#Home');
-  // const menuButton = document.querySelector('#2');
-  // const contactButton = document.querySelector('#3');
+  const menuButton = document.querySelector('#Menu');
+  const contactButton = document.querySelector('#Contact');
   let activePage = {homeIsActive : true, menuIsActive : false};
   const nav = document.querySelector('nav');
   nav.addEventListener('click', function (event) {
@@ -58,13 +59,20 @@ function handleClick() {
       section.innerHTML = '';
       activePage.homeIsActive = true;
       renderHome(section);
+      homeButton.style.fontWeight = 'bold';
     if (event.target.innerText === 'Menu'){
       section.innerHTML = '';
+      homeButton.style.fontWeight = '';
+      contactButton.style.fontWeight = '';
       renderMenu(section);
+      menuButton.style.fontWeight = 'bold';
       activePage.homeIsActive = false;
     }
     if (event.target.innerText === 'Contact') {
       section.innerHTML = '';
+      contactButton.style.fontWeight = 'bold';
+      homeButton.style.fontWeight = '';
+      menuButton.style.fontWeight = '';
       renderContact(section);
       activePage.homeIsActive = false;
     }

@@ -7,12 +7,11 @@ function clearMain(main, homeIsLoaded) {
 }
 
 
-export function renderMenu () {
-  const section = document.querySelector('section');
-
-  const menuItemEl = document.createElement('p');
-  menuItemEl.textContent = "This is the first item";
-  section.append(menuItemEl);
+// export function renderMenu () {
+//   const section = document.querySelector('section');
+//   const menuItemEl = document.createElement('p');
+//   menuItemEl.textContent = "This is the first item";
+//   section.append(menuItemEl);
   
-}
+// }
 
