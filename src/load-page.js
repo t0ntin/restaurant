@@ -6,7 +6,7 @@ import { renderContact } from './contact';
 function createHeader(main) {
   const header = document.createElement('header');
   const nav = document.createElement('nav');
-  const title = document.createElement('p');
+  const title = document.createElement('h1');
 
   main.append(header);
   header.append(title);
