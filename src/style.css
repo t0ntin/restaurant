@@ -26,6 +26,18 @@ header p {
 
 }
 
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  border: none;
+  padding: .5rem;
+  border-radius: 2px;
+  background-color: rgb(190, 33, 127);;
+}
+
 ul {
   margin: 1rem 0rem;
   display: flex;

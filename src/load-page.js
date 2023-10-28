@@ -1,6 +1,7 @@
 import './style.css';
 import plateImage from './plate.png';
 import { renderMenu } from './menu';
+import { renderContact } from './contact';
 
 function createHeader(main) {
   const header = document.createElement('header');
@@ -48,11 +49,17 @@ function handleClick() {
     if (activePage.homeIsActive === true && event.target.innerText === 'Home') {
       return;
     } else 
+      section.innerHTML = '';
       activePage.homeIsActive = true;
       renderHome(section);
     if (event.target.innerText === 'Menu'){
       section.innerHTML = '';
       renderMenu(section);
+      activePage.homeIsActive = false;
+    }
+    if (event.target.innerText === 'Contact') {
+      section.innerHTML = '';
+      renderContact(section);
       activePage.homeIsActive = false;
     }
   });
