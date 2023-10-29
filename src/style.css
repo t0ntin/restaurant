@@ -82,7 +82,9 @@ button {
   border: none;
   padding: .5rem 1rem .5rem 1rem;
   /* border-radius: 2px; */
-  background-color: rgb(89, 9, 9);
+  /* background-color: #590909; */
+  background: #0c0c0cda;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(65,7,7,1) 35%, rgba(81,8,8,0.775341796875) 71%, rgba(89,9,9,0.7912148127480159) 100%);
   color: var(--TEXT-COLOR);
   font-family: monospace;
   font-size: 1.2rem;
@@ -127,7 +129,7 @@ section {
 }
 
 section:hover {
-  transform: scale3d(1.2, 1.2, 1.2); 
+  transform: scale3d(1.05, 1.05, 1.05); 
 }
 
 @keyframes slideInSection {
